@@ -4,7 +4,6 @@
         function toggle(number) {
             var text = document.getElementById(number);
             var image = document.getElementById(number.toString().concat("img"));
-
             if(text.style.display == 'block')
             {
                 text.style.display = 'none';
@@ -16,7 +15,6 @@
                 image.style.opacity = 1.0;
             }
         }
-
     </script>
     <style>
     body {
@@ -26,11 +24,11 @@
     }
     h1 {
         color: greenyellow;
-        margin-left: 40px;
+        
     }
     div{
         display: none;
-        text-indent: 50px;
+        
     }
     img {
         opacity: 0.25;
@@ -48,19 +46,18 @@
     <img id="8img" src="8.png" onclick="toggle(8)" />
     <img id="9img" src="9.png" onclick="toggle(9)" />
     <h1>Opening encounter</h1>
-    <div id="1">After completing opening encounter and going through the portal, jump on the first swinging lamp and turn around.  The circle is directly below the platform below you.</div>
-    <div id="2">On the wall directly behind the first secret chest.</div>
+    <div id="1"><ul><li>After completing opening encounter and going through the portal, jump on the first swinging lamp and turn around.  The circle is directly below the platform below you.</li></ul></div>
+    <div id="2"><ul><li>On the wall directly behind the first secret chest.</li></ul></div>
     <h1>Totems</h1>
-    <div id="3">In the left side room afte rth totems encounter, on the balcony where the knights spawn, towards the right side.</div>
+    <div id="3"><ul><li>In the left side room afte rth totems encounter, on the balcony where the knights spawn, towards the right side.</li></ul></div>
     <h1>War Priest</h1>
-    <div id="4">On the wall by the right side balcony.</div>
-    <div id="5">Inside the final hole of Golgoroth's maze, before the exit.</div>
+    <div id="4"><ul><li>On the wall by the right side balcony.</li></ul></div>
+    <div id="5"><ul><li>Inside the final hole of Golgoroth's maze, before the exit.</li></ul></div>
     <h1>Golgoroth</h1>
-    <div id="6">The lower floor room in Golgoroth's arena</div>
-    <div id="7">Next to the hidden chest in the second jumping puzzle</div>
-    <div id="8">On the ceiling of the door leading out of the area with the second jumpin puzzle.</div>
+    <div id="6"><ul><li>The lower floor room in Golgoroth's arena</li></ul></div>
+    <div id="7"><ul><li>Next to the hidden chest in the second jumping puzzle</li></ul></div>
+    <div id="8"><ul><li>On the ceiling of the door leading out of the area with the second jumpin puzzle.</li></ul></div>
     <h1>Daughters</h1>
-    <div id="9">Above the door in the final arena.</div>
-
+    <div id="9"><ul><li>Above the door in the final arena.</li></ul></div>
 </body>
 </html>
