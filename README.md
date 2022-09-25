@@ -1,7 +1,7 @@
 # King's Fall Rune Helper
 A tool to help you mark down which are the active runes in the King's Fall raid activity in Destiny 2.  
 
-Click a rune to activate it and show the description.  Click a rune again to deactivate it and hide the description.
+Click a rune to activate it and show the description.  Reload to reset runes.  Undo is for the weak.
 
 Use it via GitHub Pages: https://f26.github.io/KingsFallRuneHelper/
 
