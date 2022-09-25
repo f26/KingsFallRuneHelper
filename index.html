@@ -2,19 +2,18 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script language="javascript" type="text/javascript">
-        function toggle(number) {
-            var text = document.getElementById(number);
-            var image = document.getElementById(number.toString().concat("img"));
-            if(text.style.display == 'block')
-            {
-                text.style.display = 'none';
-                image.style.opacity = .25;
-            }
-            else
-            {
-                text.style.display = 'block';
-                image.style.opacity = 1.0;
-            }
+        function toggle(section, number) {
+
+            var headingId = section.toString();
+            var descId = section.toString().concat("_").concat(number.toString());
+            var imgId = descId.concat("_img");
+
+            document.getElementById(headingId).style.display = 'block';
+            document.getElementById(descId).style.display = 'block';
+            document.getElementById(imgId).style.opacity = 1.0;
+
+            document.getElementById("instructionsH").style.display = 'none';
+            document.getElementById("instructions").style.display = 'none';
         }
     </script>
     <style>
@@ -25,6 +24,7 @@
     }
     h1 {
         color: greenyellow;
+        display: none;
         
     }
     div{
@@ -37,29 +37,31 @@
     </style>
 </head>
 <body>
-    <img id="1img" src="1.png" onclick="toggle(1)" />
-    <img id="2img" src="2.png" onclick="toggle(2)" />
-    <img id="3img" src="3.png" onclick="toggle(3)" />
-    <img id="4img" src="4.png" onclick="toggle(4)" />
-    <img id="5img" src="5.png" onclick="toggle(5)" />
-    <img id="6img" src="6.png" onclick="toggle(6)" />
-    <img id="7img" src="7.png" onclick="toggle(7)" />
-    <img id="8img" src="8.png" onclick="toggle(8)" />
-    <img id="9img" src="9.png" onclick="toggle(9)" />
-    <h1>Opening Encounter</h1>
-    <div id="1"><ul><li>Stand on first swinging lamp and turn around.  The rune is directly below the lip of the platform you just jumped from</li></ul></div>
-    <div id="2"><ul><li>After opening the first secret chest, turn around and look above the door</li></ul></div>
-    <h1>Totems Arena</h1>
-    <div id="3"><ul><li>In the left room of the totems encounter, up on the balcony where knights spawn</li></ul></div>
-    <h1>War Priest Arena</h1>
-    <div id="4"><ul><li>On the wall of the balcony on the right</li></ul></div>
-    <h1>Golgoroth's Maze</h1>
-    <div id="5"><ul><li>Inside the final hole of Golgoroth's maze, before the exit</li></ul></div>
-    <h1>Golgoroth Arena</h1>
-    <div id="6"><ul><li>The lower floor room in the pit where Golgoroth stands</li></ul></div>
-    <div id="7"><ul><li>In the ramrod jumping puzzle, next to the secret chest</li></ul></div>
-    <div id="8"><ul><li>On the ceiling right in front of the door that leads out of the ramrod jumping puzzle area</li></ul></div>
-    <h1>Daughters/Oryx Arena</h1>
-    <div id="9"><ul><li>Above the door in the final arena.</li></ul></div>
+    <img id="1_1_img" src="1.png" onclick="toggle(1,1)" />
+    <img id="1_2_img" src="2.png" onclick="toggle(1,2)" />
+    <img id="2_1_img" src="3.png" onclick="toggle(2,1)" />
+    <img id="3_1_img" src="4.png" onclick="toggle(3,1)" />
+    <img id="4_1_img" src="5.png" onclick="toggle(4,1)" />
+    <img id="5_1_img" src="6.png" onclick="toggle(5,1)" />
+    <img id="5_2_img" src="7.png" onclick="toggle(5,2)" />
+    <img id="5_3_img" src="8.png" onclick="toggle(5,3)" />
+    <img id="6_1_img" src="9.png" onclick="toggle(6,1)" />
+    <h1 id="instructionsH" style="display: block">Instructions</h1>
+    <div id="instructions" style="display: block">Click a rune to enable it and display where it is.  Reload to reset (undo is for the weak).</div>
+    <h1 id="1">Opening Encounter</h1>
+        <div id="1_1"><ul><li>Stand on first swinging lamp and turn around.  The rune is directly below the lip of the platform you just jumped from</li></ul></div>
+        <div id="1_2"><ul><li>After opening the first secret chest, turn around and look above the door</li></ul></div>
+    <h1 id="2">Totems Arena</h1>
+        <div id="2_1"><ul><li>In the left room of the totems encounter, up on the balcony where knights spawn</li></ul></div>
+    <h1 id="3">War Priest Arena</h1>
+        <div id="3_1"><ul><li>On the wall of the balcony on the right</li></ul></div>
+    <h1 id="4">Golgoroth's Maze</h1>
+        <div id="4_1"><ul><li>Inside the final hole of Golgoroth's maze, before the exit</li></ul></div>
+    <h1 id="5">Golgoroth's Arena</h1>
+        <div id="5_1"><ul><li>The lower floor room in the pit where Golgoroth stands</li></ul></div>
+        <div id="5_2"><ul><li>In the ramrod jumping puzzle, next to the secret chest</li></ul></div>
+        <div id="5_3"><ul><li>On the ceiling right in front of the door that leads out of the ramrod jumping puzzle area</li></ul></div>
+    <h1 id="6">Daughters/Oryx Arena</h1>
+        <div id="6_1"><ul><li>Above the door in the final arena.</li></ul></div>
 </body>
 </html>
